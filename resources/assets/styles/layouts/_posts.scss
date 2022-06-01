@@ -1,0 +1,77 @@
+// full then half post layout 
+
+.one-two {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.one-two .col {
+  @extend .col-md-6;
+
+  text-align: center;
+  padding: 0 5px 10px 5px;
+  flex-basis: inherit;
+  // Select 1st n 4th
+  &:nth-child(3n+1) {
+    @extend .col-12;
+
+    padding: 0 5px 10px 5px;
+  }
+}
+
+.one-two .post,
+.one-two .project {
+  display: block;
+  height: 500px;
+  background-size: cover;
+  background-position: 50% 0;
+  position: relative;
+
+  &::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(72, 86, 93, 0.69);
+    position: absolute;
+    top: 0;
+    transition: background-color 0.5s ease;
+    z-index: 1;
+  }
+
+  &:hover {
+    &::after {
+      background-color: rgba(72, 86, 93, 0.5);
+    }
+  }
+
+  header {
+    @include vertical-align();
+
+    z-index: 2;
+  }
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &.view-posts,
+    &.view-gallery {
+      text-transform: uppercase;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 0.05em;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
+
+.single .entry-content {
+  margin-top: 180px;
+}

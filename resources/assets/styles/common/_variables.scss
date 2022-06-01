@@ -1,0 +1,23 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,400|Roboto:400,700);
+$theme-colors: (
+  primary: #525ddc
+);
+
+$sans-serif: 'Roboto Condensed', sans-serif;
+$serif: 'Merriweather', serif;
+
+// Colors
+$super-light: #fefefe;
+$dark-text:   #222c33;
+$dark-bg:     $dark-text;
+$nepal:       #92acba;
+$bluemine:    #3d5d6f;
+$san-juan:    #48565d;
+$light-gray:  #f4f4f4;
+$gray:        #ccc;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;

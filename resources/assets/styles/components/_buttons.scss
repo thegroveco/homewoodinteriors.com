@@ -1,0 +1,31 @@
+.btn-light {
+  background-color: #fff;
+  border: 0;
+  font-family: $sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: $dark-text;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.btn-dark {
+  color: #fff;
+  border: 0;
+  font-family: $sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  background-color: $bluemine;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.wpcf7-submit {
+  @extend .btn-dark;
+}

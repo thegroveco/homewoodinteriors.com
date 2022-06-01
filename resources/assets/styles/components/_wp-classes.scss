@@ -1,0 +1,90 @@
+/**
+ * WordPress Generated Classes
+ * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+/** Media alignment */
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  display: block;
+  margin: ($spacer / 2) auto;
+  height: auto;
+}
+
+.alignleft,
+.alignright {
+  margin-bottom: ($spacer / 2);
+  height: auto;
+}
+
+@include media-breakpoint-up(sm) {
+  .alignleft {
+    float: left;
+    margin-right: ($spacer / 2);
+  }
+
+  .alignright {
+    float: right;
+    margin-left: ($spacer / 2);
+  }
+}
+
+/** Captions */
+.wp-caption {
+  @extend .figure;
+}
+
+.wp-caption img {
+  @extend .figure-img;
+  @extend .img-fluid;
+}
+
+.wp-caption-text {
+  @extend .figure-caption;
+}
+
+/** Text meant only for screen readers */
+.screen-reader-text {
+  @extend .sr-only;
+  @extend .sr-only-focusable;
+}
+
+// Weird stuff below to override Gutenberg 
+// block stuff until there's a better way.
+//             ¯\_(ツ)_/¯
+
+.wp-block-column {
+  margin-bottom: 5px;
+}
+
+.wp-block-column:not(:last-child) {
+  @include breakpoint(md) {
+    margin-right: 8px;
+  }
+}
+
+.wp-block-column:not(:first-child) {
+  @include breakpoint(md) {
+    margin-left: 8px;
+  }
+}
+
+.one3rd-two3rd .wp-block-column:first-child {
+  @include breakpoint(md) {
+    flex-basis: 32%;
+    flex-grow: 0;
+  }
+}
+
+.one3rd-two3rd .wp-block-column:last-child {
+  @include breakpoint(md) {
+    flex-basis: 64%;
+    flex-grow: 0;
+  }
+}

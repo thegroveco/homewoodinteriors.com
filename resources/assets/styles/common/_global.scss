@@ -1,0 +1,125 @@
+body {
+  background: $super-light;
+  font-family: $sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: $bluemine;
+}
+
+a {
+  color: $bluemine;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $serif;
+
+  & > a {
+    color: #fff;
+  }
+}
+
+h2 {
+  font-family: $serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 25px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #fff;
+}
+
+h3 {
+  font-family: $serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 25px;
+  letter-spacing: 0.01em;
+  color: $dark-text;
+}
+
+h4 {
+  font-family: $sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: $bluemine;
+  text-transform: uppercase;
+}
+
+p + h4 {
+  margin-top: 50px;
+}
+
+.big-callout {
+  font-family: $serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 38px;
+  letter-spacing: 0.01em !important;
+  line-height: 50px !important;
+  text-align: left;
+  color: $dark-text;
+}
+
+.callout {
+  font-family: $serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 25px;
+  letter-spacing: 0.02em;
+  line-height: 35px;
+  text-align: center;
+  color: $dark-text;
+}
+
+.cite {
+  font-family: $sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #3d5d6f;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.vertical-align {
+  @include vertical-align();
+}
+
+.social-link {
+  font-size: 23px;
+}
+
+.space-50 {
+  height: 50px;
+  background: transparent;
+  border: 0;
+  margin: 0;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 0 0.5em 3.5em 0;
+    padding: 15px 0 0 0;
+    width: 30%;
+    min-width: 30%;
+    overflow: none;
+    border-top: 1px solid #ccc;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    letter-spacing: 0.04em;
+    line-height: 25px;
+  }
+}
